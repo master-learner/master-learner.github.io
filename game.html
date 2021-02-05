@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Snake Game</title>
+<title>Want to play a game?</title>
 <style type="text/css">
 body {text-align:center;}
 canvas { border:7px dashed #4A4747 }
@@ -15,7 +15,7 @@ var level = 160; // Game level, by decreasing will speed up
 var rect_w = 45; // Width
 var rect_h = 30; // Height
 var inc_score = 50; // Score
-var snake_color = "#0520A5"; // Snake Color
+var snake_color = "Red"; // Snake Color
 var ctx; // Canvas attributes
 var tn = []; // temp directions storage
 var x_dir = [-1, 0, 1, 0]; // position adjusments
@@ -96,7 +96,7 @@ ctx.clearRect(dir[0] * 10, dir[1] * 10, 10, 10);
 else if (!tn.length)
 {
 var show_score = document.getElementById("show");
-show_score.innerHTML = "You lose!<br /> <u>Your Score:</u> <b>"+score+"</b><br><br> Want to try again?<br><br><input type='button' value='Play Again' onclick='window.location.reload();' />";
+show_score.innerHTML = "Oops!Try again.<br /> <u>Your Score:</u> <b>"+score+"</b><br><br> Want to try again?<br><br><input type='button' value='Play Again' onclick='window.location.reload();' />";
 document.getElementById("playArea").style.display = 'none';
 window.clearInterval(interval);
 }
@@ -134,6 +134,6 @@ sum+= code
 <body onload="play_game()">
 <h1>Play Snake Game</h1>
 <div id="show"></div>
-<canvas id="playArea" width="450" height="300">Sorry your browser does not support HTML5. Try using like Chrome or Firefox.</canvas>
+<canvas id="playArea" width="1450" height="1300">Sorry your browser does not support HTML5. Try using like Chrome or Firefox.</canvas>
 </body>
 </html>
